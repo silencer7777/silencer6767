@@ -132,6 +132,7 @@ body::before {
     justify-content: center;
     text-align: center;
     position: relative;
+    padding-top: 80px; /* Adjust padding-top to account for the fixed navbar */
 }
 
 .hero-content {
