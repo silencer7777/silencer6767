@@ -13,7 +13,7 @@ body {
     background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 30%, #0f0f23 70%, #000 100%);
     overflow-x: hidden;
     position: relative;
-    z-index: 1; /* Make sure body content is above background */
+    z-index: 1; /* Ensures body content is above background */
 }
 
 body::before {
@@ -27,7 +27,7 @@ body::before {
         radial-gradient(circle at 20% 80%, rgba(0,255,136,0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(138,43,226,0.1) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(0,255,136,0.05) 0%, transparent 50%);
-    z-index: -1; /* Ensure the background stays at the very back */
+    z-index: -1; /* Keeps background in the back */
     animation: alienGlow 10s ease-in-out infinite alternate;
 }
 
@@ -43,7 +43,7 @@ body::before {
     background: rgba(10,10,26,0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0,255,136,0.3);
-    z-index: 1000;
+    z-index: 1000; /* Ensures navbar stays on top */
     padding: 1rem 0;
 }
 
@@ -133,14 +133,14 @@ body::before {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding-top: 80px; /* Adjust padding-top to account for the fixed navbar */
-    z-index: 2; /* Make sure hero content is on top */
+    padding-top: 80px; /* Adjusted padding-top to avoid overlap with fixed navbar */
+    z-index: 2; /* Ensure hero section stays above background */
 }
 
 .hero-content {
     max-width: 800px;
     padding: 0 2rem;
-    z-index: 3; /* Ensure hero content is on top of the hero background */
+    z-index: 3; /* Ensure this content is above the hero background */
 }
 
 .profile-pic {
@@ -166,7 +166,7 @@ body::before {
     align-items: center;
     justify-content: center;
     margin: 2rem 0;
-    z-index: 3; /* Make sure the waveform doesn't go behind */
+    z-index: 3; /* Ensure the waveform stays above the background */
 }
 
 .waveform {
@@ -201,7 +201,7 @@ h1 {
     text-shadow: 0 0 30px rgba(0,255,136,0.8), 0 0 60px rgba(138,43,226,0.5);
     animation: glow 3s ease-in-out infinite alternate;
     letter-spacing: 3px;
-    z-index: 3; /* Ensure this text appears on top of any background */
+    z-index: 3; /* Ensure text stays on top of everything */
 }
 
 .name-silencer {
@@ -237,13 +237,15 @@ h1 {
     margin-bottom: 3rem;
     opacity: 0.9;
     text-shadow: 0 0 10px rgba(0,255,136,0.3);
+    z-index: 2; /* Ensure p text is on top of background */
 }
 
 section {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    z-index: 2; /* Ensure content sections are on top of backgrounds */
+    position: relative;
+    z-index: 2; /* Ensure content sections stay above background */
 }
 
 h2 {
@@ -273,7 +275,7 @@ h2::after {
 
 .about, .goals, .contact {
     text-align: center;
-    z-index: 2; /* Keep text above the background */
+    z-index: 2;
 }
 
 .about p {
@@ -282,7 +284,6 @@ h2::after {
     margin: 0 auto 2rem;
     opacity: 0.9;
     text-shadow: 0 0 5px rgba(0,255,136,0.3);
-    z-index: 2;
 }
 
 .tracks {
