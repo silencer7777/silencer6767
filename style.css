@@ -1,389 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Orbitron:wght@400;700;900&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silencer aka Beedy Boiz - Music Producer</title>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
-body {
-    font-family: 'Orbitron', monospace;
-    line-height: 1.6;
-    color: #00ff88;
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 30%, #0f0f23 70%, #000 100%);
-    overflow-x: hidden;
-    position: relative;
-    z-index: 1; /* Ensures body content is above background */
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(0,255,136,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(138,43,226,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(0,255,136,0.05) 0%, transparent 50%);
-    z-index: -1; /* Keeps background in the back */
-    animation: alienGlow 10s ease-in-out infinite alternate;
-}
+<body>
 
-@keyframes alienGlow {
-    0% { opacity: 0.8; }
-    100% { opacity: 1; }
-}
+<header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                🎤 <span>Silencer</span>
+            </div>
 
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10,10,26,0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0,255,136,0.3);
-    z-index: 1000; /* Ensures navbar stays on top */
-    padding: 1rem 0;
-}
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">YouTube</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
 
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #00ff88;
-    font-family: 'Orbitron', monospace;
-}
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <img src="https://i.imgur.com/4aMyEWm.jpg" class="profile-pic">
+        <h1>Silencer aka Beedy Boiz</h1>
+        <p>LA-based Music Producer | Poet Turned Beatmaker</p>
+    </div>
+</section>
 
-.mic-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    animation: pulse 2s infinite;
-    filter: drop-shadow(0 0 10px #00ff88);
-}
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        From poetry and short stories to freestyles and now full production,
+        I’ve built my sound from the ground up. Now working with GarageBand and Pro Tools,
+        I focus on creating unique, authentic beats that reflect my vision.
+    </p>
+</section>
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px #00ff88); }
-    50% { transform: scale(1.2); filter: drop-shadow(0 0 20px #00ff88); }
-}
+<!-- YOUTUBE SECTION -->
+<section id="music" class="music">
+    <h2>My YouTube</h2>
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+    <!-- CHANNEL BUTTON -->
+    <a href="https://www.youtube.com/@Silencer6767" target="_blank" class="yt-button">
+        🔴 Visit My YouTube Channel
+    </a>
 
-.nav-menu a {
-    color: #00ff88;
-    text-decoration: none;
-    transition: all 0.3s;
-    position: relative;
-}
+    <!-- AUTO-UPDATING PLAYLIST EMBED -->
+    <div class="track">
+        <iframe width="100%" height="400"
+        src="https://www.youtube.com/embed/videoseries?list=UUBRHUcOEKJWd2ZQhi9ZvFXA"
+        title="Silencer YouTube Videos"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+        </iframe>
+    </div>
+</section>
 
-.nav-menu a:hover {
-    color: #8a2be2;
-    text-shadow: 0 0 10px #8a2be2;
-}
+<!-- GOALS -->
+<section id="goals" class="goals">
+    <h2>Goals & Collabs</h2>
+    <p>
+        I create music to motivate and inspire. Open to collaborations and expanding my reach worldwide.
+    </p>
 
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: linear-gradient(90deg, #00ff88, #8a2be2);
-    transition: width 0.3s;
-}
+    <div class="social-links">
+        <a href="https://www.facebook.com/brett.cope.2025/directory_contact_info" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/silencer_aka_beedy_boizzz" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/@Silencer6767" target="_blank">YouTube</a>
+        <a href="https://www.tiktok.com/@silencer6767" target="_blank">TikTok</a>
+    </div>
+</section>
 
-.nav-menu a:hover::after {
-    width: 100%;
-}
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <p>📧 <a href="mailto:brettcope777@gmail.com">brettcope777@gmail.com</a></p>
+</section>
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
+<script src="script.js"></script>
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #00ff88;
-    margin: 3px 0;
-    transition: 0.3s;
-    box-shadow: 0 0 5px #00ff88;
-}
-
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding-top: 80px; /* Adjusted padding-top to avoid overlap with fixed navbar */
-    z-index: 2; /* Ensure hero section stays above background */
-}
-
-.hero-content {
-    max-width: 800px;
-    padding: 0 2rem;
-    z-index: 3; /* Ensure this content is above the hero background */
-}
-
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid #00ff88;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 40px rgba(0,255,136,0.6), inset 0 0 20px rgba(138,43,226,0.2);
-    animation: float 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px rgba(0,255,136,0.5));
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    33% { transform: translateY(-15px) rotate(2deg); }
-    66% { transform: translateY(-5px) rotate(-1deg); }
-}
-
-.waveform-container {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 0;
-    z-index: 3; /* Ensure the waveform stays above the background */
-}
-
-.waveform {
-    display: flex;
-    gap: 3px;
-}
-
-.wave-bar {
-    width: 5px;
-    background: linear-gradient(to top, #00ff88, #8a2be2);
-    animation: wave 2s ease-in-out infinite;
-    box-shadow: 0 0 10px rgba(0,255,136,0.5);
-}
-
-.wave-bar:nth-child(2) { animation-delay: 0.1s; height: 40px; }
-.wave-bar:nth-child(3) { animation-delay: 0.2s; height: 70px; }
-.wave-bar:nth-child(4) { animation-delay: 0.3s; height: 90px; }
-.wave-bar:nth-child(5) { animation-delay: 0.4s; height: 60px; }
-.wave-bar:nth-child(6) { animation-delay: 0.5s; height: 80px; }
-.wave-bar:nth-child(7) { animation-delay: 0.6s; height: 100px; }
-
-@keyframes wave {
-    0%, 100% { transform: scaleY(1); }
-    50% { transform: scaleY(1.8); }
-}
-
-h1 {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    font-family: 'Dancing Script', cursive;
-    font-weight: 700;
-    text-shadow: 0 0 30px rgba(0,255,136,0.8), 0 0 60px rgba(138,43,226,0.5);
-    animation: glow 3s ease-in-out infinite alternate;
-    letter-spacing: 3px;
-    z-index: 3; /* Ensure text stays on top of everything */
-}
-
-.name-silencer {
-    color: #00ff88;
-    display: block;
-    font-size: 1.1em;
-}
-
-.name-beedy {
-    color: #8a2be2;
-    display: block;
-    font-size: 0.9em;
-    font-style: italic;
-}
-
-.aka {
-    color: #fff;
-    font-size: 0.8em;
-    opacity: 0.8;
-}
-
-@keyframes glow {
-    0% { 
-        text-shadow: 0 0 30px rgba(0,255,136,0.8), 0 0 60px rgba(138,43,226,0.5);
-    }
-    100% { 
-        text-shadow: 0 0 40px rgba(0,255,136,1), 0 0 80px rgba(138,43,226,0.8), 0 0 100px rgba(0,255,136,0.6);
-    }
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    opacity: 0.9;
-    text-shadow: 0 0 10px rgba(0,255,136,0.3);
-    z-index: 2; /* Ensure p text is on top of background */
-}
-
-section {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2; /* Ensure content sections stay above background */
-}
-
-h2 {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    font-family: 'Orbitron', monospace;
-    font-weight: 700;
-    position: relative;
-    background: linear-gradient(45deg, #00ff88, #8a2be2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-h2::after {
-    content: '';
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, #00ff88, #8a2be2);
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 20px rgba(0,255,136,0.5);
-}
-
-.about, .goals, .contact {
-    text-align: center;
-    z-index: 2;
-}
-
-.about p {
-    font-size: 1.3rem;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    opacity: 0.9;
-    text-shadow: 0 0 5px rgba(0,255,136,0.3);
-}
-
-.tracks {
-    display: grid;
-    gap: 2rem;
-}
-
-.track {
-    background: rgba(10,10,26,0.8);
-    padding: 2rem;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(0,255,136,0.3);
-    box-shadow: 0 0 30px rgba(0,255,136,0.2);
-}
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 2rem auto;
-}
-
-.social-links a {
-    color: #00ff88;
-    text-decoration: none;
-    padding: 1rem;
-    background: rgba(0,255,136,0.1);
-    border-radius: 10px;
-    transition: all 0.3s;
-    border: 1px solid rgba(0,255,136,0.4);
-    font-family: 'Orbitron', monospace;
-    position: relative;
-    overflow: hidden;
-}
-
-.social-links a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(138,43,226,0.3), transparent);
-    transition: left 0.5s;
-}
-
-.social-links a:hover::before {
-    left: 100%;
-}
-
-.social-links a:hover {
-    background: rgba(138,43,226,0.3);
-    border-color: #8a2be2;
-    color: #fff;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(138,43,226,0.4);
-}
-
-.contact a {
-    color: #00ff88;
-    text-decoration: none;
-    font-weight: bold;
-    text-shadow: 0 0 10px #00ff88;
-}
-
-.contact a:hover {
-    color: #8a2be2;
-    text-shadow: 0 0 20px #8a2be2;
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: rgba(10,10,26,0.98);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        padding: 2rem 0;
-        border-bottom: 1px solid rgba(0,255,136,0.3);
-    }
-    
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    h1 {
-        font-size: 3rem;
-    }
-    
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-    }
-}
+</body>
+</html>
