@@ -4,128 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silencer aka Beedy Boiz - Music Producer</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <svg class="mic-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-                    <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
-                </svg>
-                <span>Silencer</span>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <svg class="mic-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                        <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                    </svg>
+                    <span>Silencer</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+        </nav>
+    </header>
 
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-
-                <!-- ONLY CHANGE (YouTube link fixed) -->
-                <li>
-                    <a href="https://www.youtube.com/@Silencer6767" target="_blank" rel="noopener noreferrer">
-                        YouTube
-                    </a>
-                </li>
-
-                <li><a href="#music">Music</a></li>
-                <li><a href="#goals">Goals</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="waveform-container">
+                    <div class="waveform" id="waveform"></div>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
-
-<!-- HERO -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <div class="hero-left">
-            <div class="waveform-container">
-                <div class="waveform" id="waveform"></div>
+            <div class="hero-right">
+                <img src="https://i.imgur.com/4aMyEWm.jpg" alt="Brett Cope aka Silencer Profile" class="profile-pic">
+                <h1><span class="name-silencer">Silencer</span> <span class="aka">aka</span> <span class="name-beedy">Beedy Boiz</span></h1>
+                <p>LA-based Music Producer | Poet Turned Beatmaker</p>
             </div>
         </div>
+    </section>
 
-        <div class="hero-right">
-            <img src="https://i.imgur.com/4aMyEWm.jpg" alt="Silencer Profile" class="profile-pic">
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>From poetry and short stories in middle school to freestyles since age 15. Now 29, I've evolved into a passionate music producer. Started beat making in 2024 using GarageBand and Pro Tools. Originally from Ridgecrest, CA, now based in Los Angeles.</p>
+        <p>Currently enrolled at LATTC studying Digital Media Arts.</p>
+    </section>
 
-            <h1>
-                <span class="name-silencer">Silencer</span>
-                <span class="aka">aka</span>
-                <span class="name-beedy">Beedy Boiz</span>
-            </h1>
-
-            <p>LA-based Music Producer | Poet Turned Beatmaker</p>
+    <section id="music" class="music">
+        <h2>My Beats & Tracks</h2>
+        <div class="tracks">
+            <!-- Easy to add YouTube embeds here -->
+            <div class="track">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- Add more tracks easily -->
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-        From poetry and short stories in middle school to freestyles since age 15,
-        my creative journey took a new turn in 2024 when I picked up beat-making.
-        Now using GarageBand and Pro Tools, I create polished tracks while refining
-        my own unique sound.
-    </p>
-</section>
-
-<!-- MUSIC -->
-<section id="music" class="music">
-    <h2>My Beats & Tracks</h2>
-
-    <div class="tracks">
-        <div class="track">
-            <iframe width="100%" height="300"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-            </iframe>
+    <section id="goals" class="goals">
+        <h2>Goals & Collabs</h2>
+        <p>I create music to motivate and inspire. Aiming to perform nationwide and internationally. Open to collaborations, networking in the industry, and expanding my reach.</p>
+        <div class="social-links">
+            <!-- Social media links -->
+            <a href="https://www.facebook.com/brett.cope.2025/directory_contact_info" target="_blank">Facebook: Brett Cope</a>
+            <a href="https://www.instagram.com/silencer_aka_beedy_boizzz" target="_blank">Instagram: @silencer_aka_beedy_boizzz</a>
+            <a href="https://www.youtube.com/@Silencer6767" target="_blank">YouTube: @Silencer6767</a>
+            <a href="https://www.tiktok.com/@silencer6767?_r=1&_t=ZP-95gjle2x0pz" target="_blank">TikTok: @silencer6767</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- GOALS -->
-<section id="goals" class="goals">
-    <h2>Goals & Collabs</h2>
-    <p>
-        I create music to motivate and inspire. Aiming to perform nationwide and internationally.
-    </p>
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p>Let's collaborate! <a href="mailto:brettcope777@gmail.com">brettcope777@gmail.com</a></p>
+    </section>
 
-    <div class="social-links">
-        <a href="https://www.facebook.com/brett.cope.2025/directory_contact_info" target="_blank">Facebook: Brett Cope</a>
-        <a href="https://www.instagram.com/silencer_aka_beedy_boizzz" target="_blank">Instagram</a>
-        <a href="https://www.youtube.com/@Silencer6767" target="_blank">YouTube</a>
-        <a href="https://www.tiktok.com/@silencer6767" target="_blank">TikTok</a>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <p>
-        Let's collaborate!
-        <a href="mailto:brettcope777@gmail.com">brettcope777@gmail.com</a>
-    </p>
-</section>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
